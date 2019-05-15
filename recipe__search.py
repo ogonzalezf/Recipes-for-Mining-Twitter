@@ -23,7 +23,7 @@ def search(t, q=None, max_batches=5, count=100):
             kwargs = dict([ kv.split('=') for kv in next_results[1:].split("&") ])
             search_results = twitter_api.search.tweets(**kwargs)
             statuses += search_results['statuses']
-
+	print statuses
     return statuses
 
 
